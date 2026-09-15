@@ -2934,3 +2934,97 @@ projects:
       - "11B30"
       - "11B75"
       - "11P70"
+  - slug: moving-sofa-essay
+    title: The moving sofa problem
+    summary: States Moser's moving sofa problem, proves the unit square, the half-disc and Hammersley's sofa movable, and checks the arithmetic of the classical areas.
+    branch: convex geometry
+    entry_module: LeanPool.MovingSofaEssay
+    authors:
+      - abobreshov
+    source:
+      arxiv: "1606.08111"
+      url: https://arxiv.org/abs/2411.19826
+      github_repo: abobreshov/moving-sofa-lean
+    status: verified
+    main_declarations:
+      - MovingSofaEssay.hammersleySofa_movable
+      - MovingSofaEssay.halfDisc_movable
+      - MovingSofaEssay.hammersley_area_bounds
+    main_results:
+      - declaration: MovingSofaEssay.hammersley_area_identity
+        informal: Simplifies the supplied Hammersley area decomposition to its closed form.
+      - declaration: MovingSofaEssay.hammersley_area_bounds
+        informal: Encloses Hammersley's area strictly between 2.207415 and 2.207417.
+      - declaration: MovingSofaEssay.enlargement_top_exceeds_wall
+        informal: Proves that scaling by 1.001 about height 1/2 raises the top above height 1 by exactly 0.0005.
+      - declaration: MovingSofaEssay.gerver_exceeds_hammersley
+        informal: Proves that any area at least 2.2195315 strictly exceeds Hammersley's area, conditional on that lower enclosure.
+      - declaration: MovingSofaEssay.unitSquare_movable
+        informal: Proves the unit square can pass through the hallway by a continuous translation path.
+      - declaration: MovingSofaEssay.volume_unitSquare
+        informal: Proves the unit square has Lebesgue area one.
+      - declaration: MovingSofaEssay.one_mem_achievableAreas
+        informal: Proves that area one is achievable by a bounded measurable movable set.
+      - declaration: MovingSofaEssay.one_le_sofaConstant_of_bddAbove
+        informal: Proves the sofa constant is at least one, assuming the unproved upper bound on achievable areas.
+      - declaration: MovingSofaEssay.halfDisc_movable
+        informal: Proves the upper unit half-disc can pass through the hallway by translations and a clockwise quarter-turn.
+      - declaration: MovingSofaEssay.hammersleySofa
+        informal: Defines the rectangle and two unit quarter discs with the open radius-2/π notch removed.
+      - declaration: MovingSofaEssay.hammersleySofa_measurable
+        informal: Proves the specified Hammersley sofa is measurable.
+      - declaration: MovingSofaEssay.hammersleySofa_bounded
+        informal: Proves the specified Hammersley sofa is bounded.
+      - declaration: MovingSofaEssay.hammersleySofa_horizontal
+        informal: Proves horizontal-arm containment after a left translation by at least 2/π.
+      - declaration: MovingSofaEssay.hammersleySofa_vertical
+        informal: Proves vertical-arm containment after a quarter-turn and a downward translation by at least 2/π.
+      - declaration: MovingSofaEssay.hammersleySofa_stationary_turn_impossible
+        informal: Refutes the proposed stationary-centre rotation; this does not refute movability by another path.
+      - declaration: MovingSofaEssay.proposedHammersleyMotion_continuous
+        informal: Proves continuity of the proposed three-phase angle and translation paths.
+      - declaration: MovingSofaEssay.proposedHammersleyMotion_endpoints
+        informal: Proves the proposed path meets both far-arm endpoint conditions.
+      - declaration: MovingSofaEssay.proposedHammersleyMotion_fails
+        informal: Proves that the proposed path leaves the hallway at time 1/3.
+      - declaration: MovingSofaEssay.hammersleySofa_turn
+        informal: Proves hallway containment during the clockwise quarter-turn with the notch centre moving on a radius-2/π circle.
+      - declaration: MovingSofaEssay.hammersleySofa_movable
+        informal: Proves Hammersley's sofa is movable using horizontal entry, a circular-centre turn, and vertical exit.
+    tags:
+      - moving-sofa
+      - convex-geometry
+      - rigid-motions
+    msc:
+      - "52A40"
+  - slug: stamp-folding
+    title: Stamp folding, the first five counts
+    summary: The non-crossing-hinge permutation model of stamp folding, with the counts 1, 2, 6, 16, 50 of OEIS A000136 proved by decision procedure.
+    branch: enumerative combinatorics
+    entry_module: LeanPool.StampFolding
+    authors:
+      - abobreshov
+    source:
+      url: https://oeis.org/A000136
+      arxiv: "1302.2025"
+      github_repo: abobreshov/stamp-folding-lean
+    status: verified
+    main_declarations:
+      - StampFolding.card_foldings_five
+    main_results:
+      - declaration: StampFolding.card_foldings_one
+        informal: Proves the declared permutation model has one folding of one stamp.
+      - declaration: StampFolding.card_foldings_two
+        informal: Proves the declared permutation model has two foldings of two stamps.
+      - declaration: StampFolding.card_foldings_three
+        informal: Proves the declared permutation model has six foldings of three stamps.
+      - declaration: StampFolding.card_foldings_four
+        informal: Proves the declared permutation model has sixteen foldings of four stamps.
+      - declaration: StampFolding.card_foldings_five
+        informal: Proves the declared permutation model has fifty foldings of five stamps.
+    tags:
+      - combinatorics
+      - stamp-folding
+      - finite-enumeration
+    msc:
+      - "05A15"
