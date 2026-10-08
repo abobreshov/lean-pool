@@ -1276,10 +1276,6 @@ import LeanPool.Monsky.SegmentTriangle
 import LeanPool.Monsky.SimplexBasic
 import LeanPool.Monsky.Square
 import LeanPool.Monsky.TriangleCorollary
-import LeanPool.MovingSofaEssay
-import LeanPool.MovingSofaEssay.Basic
-import LeanPool.MovingSofaEssay.Hammersley
-import LeanPool.MovingSofaEssay.Problem
 import LeanPool.Neukirch
 import LeanPool.Neukirch.ExtensionOfDedekindDomains
 import LeanPool.Neukirch.HilbertRamificationTheory
